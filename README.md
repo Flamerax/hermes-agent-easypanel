@@ -1,3 +1,10 @@
+Adicione no .ENV:
+TZ=America/Sao_Paulo
+MAX_TURNS=8
+HERMES_DASHBOARD=1
+DASHBOARD_USERNAME=admin
+DASHBOARD_PASSWORD={{SENHA SEGURA}}
+
 <p align="center">
   <img src="assets/banner.png" alt="Hermes Agent" width="100%">
 </p>
