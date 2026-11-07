@@ -4,9 +4,6 @@ services:
     image: hermes-agent
     restart: unless-stopped
 
-    ports:
-      - "9119:9119"
-
     volumes:
       - hermes-data:/opt/data
 
