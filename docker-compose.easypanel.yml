@@ -1,0 +1,21 @@
+services:
+  hermes:
+    build: .
+    image: hermes-agent
+    restart: unless-stopped
+
+    ports:
+      - "9119:9119"
+
+    volumes:
+      - hermes-data:/opt/data
+
+    environment:
+      HERMES_DASHBOARD: "1"
+      HERMES_DASHBOARD_BASIC_AUTH_USERNAME: ${DASHBOARD_USERNAME}
+      HERMES_DASHBOARD_BASIC_AUTH_PASSWORD: ${DASHBOARD_PASSWORD}
+
+    command: ["gateway", "run"]
+
+volumes:
+  hermes-data:
